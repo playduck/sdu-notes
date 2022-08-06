@@ -1,0 +1,51 @@
+{
+    "cSpell.enabled": true,
+    "cSpell.language": ",de",
+
+    "editor.wordWrap": "on",
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+
+    "markdownlint.config": {
+        "default": true,
+        "MD003": { "style": "atx" },
+        "MD007": { "indent": 4 },
+        "MD041": false,
+        "MD046": false,
+        "MD036": false,
+
+        "no-hard-tabs": false
+    },
+
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.quickSuggestionsDelay": 20,
+        "editor.wordBasedSuggestions": false,
+        "editor.suggestOnTriggerCharacters": true,
+        "editor.suggest.showSnippets": true,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.snippetSuggestions": "top",
+    },
+
+    "[latex]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.quickSuggestionsDelay": 20,
+        "editor.wordBasedSuggestions": false,
+        "editor.suggestOnTriggerCharacters": true,
+        "editor.suggest.showSnippets": true,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.snippetSuggestions": "top",
+    },
+
+    "files.associations": {
+        "*.md": ["markdown"],
+        // "*.md": ["latex"],
+    }
+}
