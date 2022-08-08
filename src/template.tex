@@ -11,6 +11,7 @@
 
 \usepackage[ngerman]{babel}
 \usepackage[iso,german]{isodate}
+
 \usepackage{hyphenat}
 \hyphenation{Mathe-matik wieder-gewinnen}
 \usepackage[babel=true]{csquotes}
@@ -42,11 +43,10 @@
   compat=1.18, % lastest release as of 2022-07-02
 }
 
-
 \usepackage{scrlayer}
 \usepackage[]{scrlayer-scrpage}
-\ohead{$date$}
-\chead{$class$}
+\ohead{\today}
+\chead{\lowercase{\scshape{$class$}}}
 \ihead{$author$}
 \ofoot*{\pagemark}
 \cfoot*{}

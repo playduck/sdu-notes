@@ -13,7 +13,8 @@ WATCH=0
 CLASS=""
 TOPIC=""
 
-DATE=$(date +"%d. ")${MONTHS[$(date +"%m") - 1]}
+STRMON="$(date +"%m")"
+DATE=$(date +"%d. ")${MONTHS[$((10#$STRMON)) - 1]}$(date +" %Y")
 
 # Get flags and opts
 while getopts "h?wf:" opt; do
