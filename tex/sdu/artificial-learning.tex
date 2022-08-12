@@ -1,0 +1,293 @@
+\documentclass[
+    fontsize      = 11pt,
+    paper         = a4,
+    twoside       = false,
+    parskip       = half,
+    pagesize      = false,
+]{scrartcl}
+
+\author{Robin Prillwitz}
+
+\usepackage[ngerman]{babel}
+\usepackage[iso,german]{isodate}
+\date{11. August 2022}
+
+\usepackage{hyphenat}
+\hyphenation{Mathe-matik wieder-gewinnen}
+\usepackage[babel=true]{csquotes}
+\usepackage[protrusion=true,expansion,tracking=true,nopatch=eqnum]{microtype}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[locale=DE]{siunitx}
+
+\usepackage[outputdir=/Users/robin/Documents/sdu-notes/temp/sdu]{minted}
+
+\usepackage{graphicx}
+\usepackage{grffile}
+\graphicspath{{./img/}}
+
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{ulem}
+
+% % Scale images if necessary, so that they will not overflow the page
+% % margins by default, and it is still possible to overwrite the defaults
+% % using explicit options in \includegraphics[width, height, ...]{}
+% \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows,automata,backgrounds,petri}
+\usepackage[european, betterproportions]{circuitikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{pgfgantt}
+\usepackage{pgfornament}
+\pgfplotsset{
+  compat=1.18, % lastest release as of 2022-07-02
+}
+
+\usepackage{scrlayer}
+\usepackage[]{scrlayer-scrpage}
+\ohead{11. August 2022}
+\chead{\lowercase{\scshape{Sdu}}}
+\ihead{Robin Prillwitz}
+\ofoot*{\pagemark}
+\cfoot*{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{textcomp}
+
+\setsansfont[
+    Scale       = MatchLowercase,
+    ScaleAgain  = 1.08,
+    Ligatures   = TeX
+]{Helvetica Neue}
+
+\setmonofont[
+    Scale       = MatchLowercase,
+    Ligatures   = TeX,
+    Contextuals = {Alternate}
+]{Fira Code}
+
+\setmainfont[
+    Scale       = MatchLowercase,
+    UprightFont =  *-Regular,
+    BoldFont    =  *-Bold,
+    ItalicFont  =  *-It,
+    Ligatures   = TeX
+]{Minion Pro}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\hypertarget{artificial-learning}{%
+\section{Artificial learning}\label{artificial-learning}}
+
+\hypertarget{plasticity}{%
+\subsection{Plasticity}\label{plasticity}}
+
+\textbf{Neuroplasticity}: Ability for the brain to re-organize itself in
+both \emph{structure} and \emph{function} over time due to external and
+internal events. \textbf{Neuroplasticity} is~mechanism behind
+``\emph{learning}'' and is happening continuously.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\textbf{Structural Plasticity} & ~\textbf{Functional
+Plasticity} \\ \addlinespace
+\midrule
+\endhead
+new neural connections & changing existing connections \\ \addlinespace
+long-term changes & short term changes \\ \addlinespace
+\bottomrule
+\end{longtable}
+
+\textbf{Plasticity} happens on all levels from cortical down to the
+synaptic level.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{cortical}: changing stimulus from limbs triggers different
+  existing neurons
+\item
+  \textbf{synaptic}: changing amount of gates on post-synaptic neurons'
+  dendrites
+\end{itemize}
+
+\hypertarget{synaptic-strength-in-functional-plasticity}{%
+\subsection{\texorpdfstring{\textbf{synaptic strength} in functional
+plasticity}{synaptic strength in functional plasticity}}\label{synaptic-strength-in-functional-plasticity}}
+
+\hypertarget{long-term-potentiation-ltp}{%
+\subsubsection{\texorpdfstring{Long Term Potentiation
+(\emph{LTP})}{Long Term Potentiation (LTP)}}\label{long-term-potentiation-ltp}}
+
+\textbf{HFS}: \(100\) Pulses (over \(1\si{s} \rightarrow 100\si{Hz}\))
+as an input to a neuron. The neuron is resting at \(t=0\). The
+\textbf{HFS} hits the neuron resulting in an instantaneous output, the
+\textbf{LTP}. The neurons output jumps, then receedes and continues to
+saturate (Only as long as the \textbf{HFS} is continous.) The
+\textbf{synaptic strength} is the chance the output is increased.
+
+A lot of fast input \(\rightarrow\) Big changes and high learning
+
+\textbf{LTP \emph{increases} synaptic strength}
+
+\hypertarget{long-term-depressino-ltd}{%
+\subsubsection{\texorpdfstring{Long Term Depressino
+(\emph{LTD})}{Long Term Depressino (LTD)}}\label{long-term-depressino-ltd}}
+
+The Inverse, to decrease the \textbf{synaptic strength} an \textbf{LFS}
+(\(900\) Pulses \(15\si{min} \rightarrow 1\si{Hz}\)) is sent. The neuron
+responsds, dips and saturates in a depression.
+
+Low data \(\rightarrow\) Low learning
+
+\textbf{LTD \emph{decreases} synaptic stregth}
+
+\hypertarget{chemical-basis}{%
+\subsubsection{Chemical basis}\label{chemical-basis}}
+
+\textbf{LTP} and \textbf{LTD} result in synapeses by creating or
+destroying gates at the pos-synaptic terminal respectively.
+
+\hypertarget{hebbian-learning-model}{%
+\subsection{Hebbian learning model}\label{hebbian-learning-model}}
+
+Efficiency describes the likelyhood if a presynaptic neuron spiking and
+exciting it's postsynaptic neuron. The likelyhood of the post-synaptic
+neuron firing after having been exicted is increased. More firing
+together \(\rightarrow\) more likely to fire together in the future.
+They spiking is, however, \emph{not necessarily causal}. At high
+efficiency the spiking of both neurons are \textbf{temporally
+correlated}. The spiking is \textbf{associative} and
+\textbf{unsupervised}.
+
+\textbf{Neurons that fire together, wire together.}
+
+\hypertarget{simple-mathematical-model}{%
+\subsubsection{Simple mathematical
+model}\label{simple-mathematical-model}}
+
+\[\frac{\mathit{d}\omega_1}{\mathit{d}t} = \mu \cdot v \cdot u_1\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\omega\): dsecribes the synaptic strength / weight
+\item
+  \(\frac{\mathit{d}\omega_1}{\mathit{d}t}\): (not a derivative), Change
+  in synaptic weight
+\item
+  \(\mu\): Learnig rate (\(\mu \ll 1\) to avoid ``exploding learning
+  problem'')
+\item
+  \(v\): Output of post-synaptic neuron
+\item
+  \(u_1\): Output of pre-synaptic neuron / input to post-synaptic neuron
+\end{itemize}
+
+\[\omega_n = \omega_{n-1} + \frac{\mathit{d}\omega_{n-1}}{\mathit{d}t} = \omega_{n-1} + \mu \cdot v \cdot u_{n-1} \]
+
+\textbf{Problem}: \(\omega_1\) is always increasing, unstable \sout{but
+biologically correct}. This is an open control loop.
+
+As this is unsupervised we don't have an error term and can't simply
+stop when the model is ``good enough''.
+
+\hypertarget{ltp}{%
+\subsubsection{LTP}\label{ltp}}
+
+The further the amount of time between two spikes firing the more the
+weight changes. A high \(\delta t\) results in little change, a small
+\(\delta t\) results in large changes. At \(\delta t = 0\) maximal
+change occurs. The simple model only results in positive change, thus
+unstable.
+
+\hypertarget{input-correlation-learning-ico}{%
+\subsection{\texorpdfstring{Input correlation learning
+(\emph{ICO})}{Input correlation learning (ICO)}}\label{input-correlation-learning-ico}}
+
+Learning rule
+\[\frac{\delta w_a}{\delta t} = \eta \cdot f \left( A, t\right) \otimes \frac{\delta f \left( B, t\right) }{\delta t}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\eta\): learning rate
+\item
+  \(f\left( A, t\right) \otimes \frac{\delta f \left( B, t\right) }{\delta t}\):
+  Temporal correlation
+\item
+  \(otimes\): cross correlation
+\item
+  \(A\): Predictive signal
+\item
+  \(B\): Reflex signal
+\item
+  \(Y\): Neuron Ouput
+\item
+  \(w_a\) weight between \(A\) and \(Y\)
+\item
+  \(f\) output function of a neuron (including the sigmoid)
+\end{itemize}
+
+If we'd like to stop the learning we can assume \(B\) to be constant. We
+cannot guarantee \(B \rightarrow 0\) (to stop learning) but we can take
+the derivative to stop learning once stimulus ceases change.
+
+This Algorithm \textbf{will converge} to the correct weight.
+
+Output signal is the weighted sum.
+\[Y(t) = w_a \cdot f \left( A, t\right) + f \left( B, t\right)\]
+
+\hypertarget{perceptron-learning}{%
+\subsubsection{Perceptron learning}\label{perceptron-learning}}
+
+Learning by updating input weights only. Update done using
+\textbf{gradient descent}.
+
+Update weight in proportion to contribution to the output. Contribution
+is the change in error \(E\) für a given change in \(w\), where the mean
+squared error is defined as \[E = \frac{1}{2} \left( t-v\right)^2\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(t\): target output
+\item
+  \(v\): actual output
+\end{itemize}
+
+Determining error requires a known correct output.
+
+\(\rightarrow\) \textbf{supervised learning}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Derivative of error is a gradient of \(E\). Finding the global minimum
+is done using gradient descent. The error gradient for a sigmoid is
+given by \begin{align*}
+\frac{\mathit{d}E}{\mathit{d}w} &= \frac{1}{2}\cdot 2 \frac{\mathit{d}(t-v)}{\mathit{d}w}(t-v) \\[2ex]
+&= v (1-v)(t-v)
+\end{align*}
+
+Updates on weights are done using
+\[ \frac{\mathit{d}w_i}{\mathit{d}t} = \mu \cdot v(1-v) (t-v) \cdot u_i\]
+
+\end{document}

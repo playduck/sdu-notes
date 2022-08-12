@@ -1,0 +1,144 @@
+\documentclass[
+    fontsize      = 11pt,
+    paper         = a4,
+    twoside       = false,
+    parskip       = half,
+    pagesize      = false,
+]{scrartcl}
+
+\author{Robin Prillwitz}
+
+\usepackage[ngerman]{babel}
+\usepackage[iso,german]{isodate}
+\date{10. August 2022}
+
+\usepackage{hyphenat}
+\hyphenation{Mathe-matik wieder-gewinnen}
+\usepackage[babel=true]{csquotes}
+\usepackage[protrusion=true,expansion,tracking=true,nopatch=eqnum]{microtype}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[locale=DE]{siunitx}
+
+\usepackage[outputdir=/Users/robin/Documents/sdu-notes/temp/sdu]{minted}
+
+\usepackage{graphicx}
+\usepackage{grffile}
+\graphicspath{{./img/}}
+
+% % Scale images if necessary, so that they will not overflow the page
+% % margins by default, and it is still possible to overwrite the defaults
+% % using explicit options in \includegraphics[width, height, ...]{}
+% \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows,automata,backgrounds,petri}
+\usepackage[european, betterproportions]{circuitikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{pgfgantt}
+\usepackage{pgfornament}
+\pgfplotsset{
+  compat=1.18, % lastest release as of 2022-07-02
+}
+
+\usepackage{scrlayer}
+\usepackage[]{scrlayer-scrpage}
+\ohead{10. August 2022}
+\chead{\lowercase{\scshape{Sdu}}}
+\ihead{Robin Prillwitz}
+\ofoot*{\pagemark}
+\cfoot*{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{textcomp}
+
+\setsansfont[
+    Scale       = MatchLowercase,
+    ScaleAgain  = 1.08,
+    Ligatures   = TeX
+]{Helvetica Neue}
+
+\setmonofont[
+    Scale       = MatchLowercase,
+    Ligatures   = TeX,
+    Contextuals = {Alternate}
+]{Fira Code}
+
+\setmainfont[
+    Scale       = MatchLowercase,
+    UprightFont =  *-Regular,
+    BoldFont    =  *-Bold,
+    ItalicFont  =  *-It,
+    Ligatures   = TeX
+]{Minion Pro}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\hypertarget{artificial-neural-brains}{%
+\section{Artificial neural brains}\label{artificial-neural-brains}}
+
+\hypertarget{braitenberg-vehicles}{%
+\subsection{Braitenberg Vehicles}\label{braitenberg-vehicles}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Ipsilateral}: Connections on same side
+\item
+  \textbf{Contralateral}: Connections cross sides
+\item
+  \textbf{Excitatory}: Input Increases \textrightarrow~Output Increases
+\item
+  \textbf{Inhibitory}: Input Increases \textrightarrow~Output Decreases
+\end{itemize}
+
+Vehicle emulates simple \(P\)-type control.
+
+Mathematical model includes:
+
+\begin{itemize}
+\tightlist
+\item
+  \(s_x\): Sensor value
+\item
+  \(v_x\): Output value
+\item
+  \(k\): Linear proportional gain
+\end{itemize}
+
+Mathematical example implementations:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Ipsilateral}: \(v_{\text{left}} \propto s_{\text{left}}\)
+\item
+  \textbf{Contralateral}: \(v_{\text{left}} \propto s_{\text{right}}\)
+\item
+  \textbf{Excitatory}: \(v \propto s\)
+\item
+  \textbf{Inhibitory}: \(v \propto \frac{1}{s}\)
+\end{itemize}
+
+\textbf{Pathplanning}: Finding path from known start to known end
+including known obstacles.
+
+Complex behavior emerges by combining multiple weighted control loops
+running in parallel.
+
+\end{document}
