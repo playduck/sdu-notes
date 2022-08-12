@@ -1,5 +1,5 @@
 {
-    "cSpell.enabled": true,
+    "cSpell.enabled": false,
     "cSpell.language": ",de",
 
     "editor.wordWrap": "on",
@@ -47,5 +47,8 @@
     "files.associations": {
         "*.md": ["markdown"],
         // "*.md": ["latex"],
-    }
+    },
+    "cSpell.enableFiletypes": [
+        "markdown"
+    ]
 }
