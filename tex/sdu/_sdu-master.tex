@@ -696,7 +696,8 @@ More complex splitting algorithms and procesdures:
 \subsection{Biologically inspired
 robotics}\label{biologically-inspired-robotics}}
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
   \emph{What is biologically-inspired robotics?}
 
@@ -727,7 +728,7 @@ robotics}\label{biologically-inspired-robotics}}
 \item
   \emph{What is a neurorobot? Can you give an example of a neurorobot?}
 
-  \textbf{(?)}
+  A breitenberg vehicle.
 \item
   \emph{What is embodied AI?}
 
@@ -774,18 +775,23 @@ robotics}\label{biologically-inspired-robotics}}
   the systems baseline behviour with the model-free system adapting to
   external changes.
 
-  Examples: - \textbf{Model based}: PID Controller - \textbf{Model
-  free}: \textbf{(?)} - \textbf{Both}: \textbf{(?)}
-\end{itemize}
+  Examples: 3-D Printer controlling it's nozzle temperatur with a model
+  (PID Controller) and minimizing motor vibrations using a learning
+  algorithm.
+\end{enumerate}
 
 \hypertarget{neurons-1}{%
 \subsection{Neurons}\label{neurons-1}}
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
   \emph{What is a neuron?}
 
-  A biological braincell responsible for processing.
+  A biological braincell responsible for processing information.
+
+  It consists of multiple Inputs (\textbf{Dendirtes}), one Output
+  (\textbf{Axiom}) and it's core, the \textbf{Soma}.
 \item
   \emph{What are the different types of neurons?}
 
@@ -830,8 +836,7 @@ robotics}\label{biologically-inspired-robotics}}
 \item
   \emph{What is an action potential?}
 
-  A group of various electric signals collected by a neuron.
-  \textbf{(?)}
+  A spike signal input to a neuron.
 \item
   \emph{Describe how an action potential is generated.}
 
@@ -851,7 +856,7 @@ robotics}\label{biologically-inspired-robotics}}
   \item
     The \textbf{repolarization phase} follows showing a decline in
     voltage as the Sodium gates saturate and repell ions, thus allowing
-    Potassium (\(K+\)) to enter.
+    Potassium (\(K-\)) to enter.
   \item
     The \textbf{hyperpolarization phase} returns to the resting state as
     the voltage reaches an equilibrium.
@@ -893,11 +898,11 @@ robotics}\label{biologically-inspired-robotics}}
   advantages/drawbacks? Which one will you choose and why?}
 
   \begin{align*}
-    \text{RelU } &= \begin{cases} 0 \text{ for } x < 0\\ x \text{ for } x \geq 0\end{cases}\\[2ex]
-    \text{Heaviside } &= \begin{cases} 0 \text{ for } x < 0\\ 0.5 \text{ for } x = 0\\ 1 \text{ for } x > 0\end{cases}\\[2ex]
-    \text{Linear } &= x\\
-    \text{Sigmoid} &= \frac{1}{1+e^{-x}}
-    \end{align*}
+   \text{RelU } &= \begin{cases} 0 \text{ for } x < 0\\ x \text{ for } x \geq 0\end{cases}\\[2ex]
+   \text{Heaviside } &= \begin{cases} 0 \text{ for } x < 0\\ 0.5 \text{ for } x = 0\\ 1 \text{ for } x > 0\end{cases}\\[2ex]
+   \text{Linear } &= x\\
+   \text{Sigmoid} &= \frac{1}{1+e^{-x}}
+   \end{align*}
 
   \begin{itemize}
   \tightlist
@@ -915,7 +920,7 @@ robotics}\label{biologically-inspired-robotics}}
   both computer implementation and biology perspectives)?}
 
   It binds the output to a manageable range which avoids overflow and
-  offers great precicion using IEE754. It also models neuron's own
+  offers great precicion using IEE754. It also models neurons' own
   saturation.
 \item
   \emph{What is the basic difference between biological neural
@@ -934,85 +939,218 @@ robotics}\label{biologically-inspired-robotics}}
   resistors acting upon a cpacitor and receiving an external input.
 
   The model only offers one input. It breaks down with too-high currents
-  failing to simulate accordingly.
+  failing to simulate accordingly. The model only generates spikes and
+  it's output is not generally useful for computing.
 
   It's implementation is computationally incredibly expensive requring
   mutliple equations to be evaluated for every timestep of the voltage
   signal.
-\end{itemize}
+\end{enumerate}
 
 \hypertarget{braitenberg-vehicles-1}{%
 \subsection{Braitenberg vehicles}\label{braitenberg-vehicles-1}}
 
-\begin{itemize}
-\tightlist
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
   \emph{What is a Braitenberg vehicle? Can you give an example of one
   and how it behaves?}
-\end{itemize}
 
-A simple concept of a neurorobot consisting of two powered wheels
-receiving input from two sensors placed at the top left and right of the
-vehicle. The connections between the sensors and wheels dictate the
-vehicles emerging behaviour.
+  A simple concept of a neurorobot consisting of two powered wheels
+  receiving input from two sensors placed at the top left and right of
+  the vehicle. The connections between the sensors and wheels dictate
+  the vehicles emerging behaviour.
 
-An agressive vehicle features \textbf{contralateral} and
-\textbf{excitatory} connetions and agressively manouvers towards the
-sensor's gratests stimulus. The \glqq love\grqq vehicle consists of
-\textbf{ipsilateral} and \textbf{inhibitory} connections resulting in it
-seeking the source of gratests stimulus but slowly coming to a halt when
-approaching it.
-
-\begin{itemize}
-\tightlist
+  An agressive vehicle features \textbf{contralateral} and
+  \textbf{excitatory} connetions and agressively manouvers towards the
+  sensor's gratests stimulus. The \glqq love\grqq vehicle consists of
+  \textbf{ipsilateral} and \textbf{inhibitory} connections resulting in
+  it seeking the source of gratests stimulus but slowly coming to a halt
+  when approaching it.
 \item
   \emph{Are there any advantages of using Braitenberg vehicles?}
-\end{itemize}
 
-Their rather complex behavior emerging from very simplistic rules make
-them computationally trivial.
+  Their rather complex behavior emerging from very simplistic rules make
+  them computationally trivial.
 
-They enable emulating behaviors of simple insects.
+  They enable emulating behaviors of simple insects.
+\end{enumerate}
 
 \hypertarget{learning}{%
 \subsection{Learning}\label{learning}}
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
   \emph{What is neuroplasticity? What types of neuroplasticity are
   there?}
+
+  Neuroplasticity describes the ability of the brain to re-organize
+  itself over time in order to learn. There is \textbf{structural} and
+  \textbf{functional} neuroplasticity.
 \item
   \emph{What is structural/functional plasticity? What are the
   differences between the two?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Structural}: Major structural changes over long periods of
+    time
+  \item
+    \textbf{Functional}: Minor adaptions over short periods of time
+  \end{itemize}
+
+  There are more biological mechanisms for \textbf{structural} than for
+  \textbf{functional} changes.
 \item
   \emph{Can you give an example of structural/functional plasticity?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Structural}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Synapses changing in number
+    \item
+      Synapses receptors changing in density
+    \end{itemize}
+  \item
+    \textbf{Functional}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Synapses adjusting their strength (\emph{synaptic plasticity})
+    \end{itemize}
+  \end{itemize}
 \item
   \emph{What is Long Term Potentiation? What is Long Term Depression?
   Can you say something about the chemical process and any changes
   underlying LTP and LDP?}
+
+  \textbf{LTP}: If the synapse is overstimulated for a long period of
+  time (many pulses in quick succession, high frequency) the synapse
+  will create more neural receptors and thus \glqq strengthen \grqq the
+  conection. The \emph{fEPSP} slope increases.
+
+  \textbf{LTD}: If the synapse is, however, understimulated for a long
+  time (very few pulses, low frequency), it will reduce the ammount of
+  neuroreceptors at the post-synaptic neuron essentially
+  \glqq weakening\grqq the conection. The \emph{fEPSP} slope decreases.
+
+  \textbf{(?)}
 \item
   \emph{What is Hebbian learning? What are its drawbacks as a model for
   learning?}
+
+  \glqq Neurons that fire together, wire together \grqq
+
+  It describes the likelyhood of a presynaptic neuron spiking and
+  exciting it's postsynaptic neuron. The likelyhood of the post-synaptic
+  neuron firing after having been exicted is increased. More firing
+  together \(\rightarrow\) more likely to fire together in the future.
+  They spiking is, however, \textbf{not necessarily causal}. At high
+  efficiency the spiking of both neurons are \textbf{temporally
+  correlated}. The spiking is \textbf{associative} and
+  \textbf{unsupervised}.
+
+  It's model is describes as
+  \[\frac{\partial \omega_1}{\partial t} = \mu v u_1\] wherby the
+  partial term \(\frac{\partial \omega_1}{\partial t}\) may grow
+  unbounded. As this control loop is unsupervised we can't stop the
+  model once it's \glqq good enough\grqq.
 \item
   \emph{What is Spike-Timing Dependent Plasticity?}
+
+  \textbf{STDP} describes neurons' change in synaptic weight in relation
+  to \textbf{LT Potentiation} and \textbf{LT Depression}. This proves a
+  biological basis for Hebbian learning, as neurons which have a strong
+  temporal correlation have a realtively strong synaptic weight.
 \item
   \emph{Do you know other forms of functional plasticity?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Homosynaptic} plasticity: changes in synapse strength occur
+    only at post-synaptic targets that are specifically stimulated by a
+    pre-synaptic target.
+  \item
+    \textbf{Heterosynaptic} plasticity: activity of a third neuron can
+    releases chemical neuromodulators that induce changes in synaptic
+    strength between two other neurons.
+  \item
+    \textbf{Non-synaptic} plasticity: intrinsic excitability,
+    i.e.~sensitivity to synaptic input, of neurons can be altered and is
+    manifested as changes in the firing characteristics of the neuron
+    itself.
+  \item
+    \textbf{Homeostatic} plasticity: capacity of neurons to regulate
+    their own excitability relative to network activity, a compensatory
+    adjustment that occurs over the timescale of days.
+  \end{itemize}
 \item
   \emph{What type of plasticity is Hebbian learning (homo-, hetero-,
-  non- }or homeostatic)?*
+  non- or homeostatic)?}
+
+  Hebbian learning is \textbf{homosynaptic} plasticity. \textbf{(?)}
 \item
   \emph{What is ICO learning? What type of synaptic plasticity is it and
   why? Can you give an example of how ICO learning can be used in
   robots?}
+
+  \textbf{Input correlation learning} (\textbf{ICO}) is
+  \textbf{heterosynaptic} plasticity.
+
+  The goal is to detect an event which triggers a reflex signal using a
+  predictive signal (without even triggering the reflex). This is
+  implemented using the correlation of these two (predictive and reflex
+  signal). Implementing this requires a third neuron (one for each input
+  and one additional neuron as output), thus \textbf{heterosynapsis} is
+  required.
+
+  Example: Detecting obstacles using a camera (predictive input) without
+  triggering the bump sensor (reflex input). The robot can learn to
+  avoid obstacles by using the camera only.
 \item
   \emph{How do perceptrons learn? What is the fundamental difference
   between ICO learning and perceptron learning (think in terms of how
   gradient descent works vs how the ICO learning rule works)?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{ICO} learns by adapting the time between predictive input
+    and reflex input (the correlation between those). This process is
+    \textbf{unsupervised}.
+  \item
+    \textbf{perceptrons} learn by adjusting their weight by trying to
+    minimize some given error function. This requires an expected output
+    and is \textbf{supervised}.
+  \end{itemize}
 \item
   \emph{What is a Multi-Layer Perceptron (MLP)?}
+
+  An \textbf{MLP} is a neural network. It consists of an input layer, an
+  output layer and a defined amount of fully convoluted hidden layers
+  inbetween those two.
 \item
   \emph{What is the backpropagation algorithm and how does it work? Why
   is it called a gradient descent method?}
-\end{itemize}
+
+  Backpropagation describes the process of changing weights in
+  accordance to their respective impact on the output error. An
+  errorgradient is calculated for each output neuron and for each hidden
+  layer up to the input. Based on this gradient each weight is adjusted
+  accordingly.
+
+  The gradient describes an \(n\)-dimensional vector pointing towards
+  the steepest decent on the error manifold's surface. Decending this is
+  called gradient decent.
+\end{enumerate}
 
 \end{document}
