@@ -60,6 +60,11 @@ for f in markdownFiles:
             if not yaml_section:
                 outfile.write(line)
 
+        outfile.write("""
+\\clearpage
+\\newpage
+""")
+
 print("compiling...")
 
 compileCmd = f"./src/convert.sh {aioName}"

@@ -43,7 +43,7 @@ class: Sdu
 
 1. *Can you give an example of embodied AI in humans/animals? Can you give an example of embodied AI in robots?*
 
-    **(?)**
+    Gas detecting robot inspired by cockroaches.
 
 1. *Why is the environment important in embodied AI?*
 
@@ -67,7 +67,7 @@ class: Sdu
 
     A biological braincell responsible for processing information.
 
-    It consists of multiple Inputs (**Dendirtes**), one Output (**Axiom**) and it's core, the **Soma**.
+    It consists of multiple Inputs (**Dendrites**), one Output (**Axiom**) and it's **soma** with **nucleus*.*
 
 1. *What are the different types of neurons?*
 
@@ -97,7 +97,7 @@ class: Sdu
 
 1. *What is an action potential?*
 
-    A spike signal input to a neuron.
+    An electrical signal in a neuron.
 
 1. *Describe how an action potential is generated.*
 
@@ -106,8 +106,8 @@ class: Sdu
 1. *Describe how the different phases of the action potential are generated.*
 
     - The **resting phase** is the default state.
-    - The **depolarization phase** occurs once the $Na+$ gates reach a voltage-threshold. A voltage overshoot occurs as reactions are not instantenous.
-    - The **repolarization phase** follows showing a decline in voltage as the Sodium gates saturate and repell ions, thus allowing Potassium ($K-$) to enter.
+    - The **depolarization phase** occurs once the Natrium ($Na+$) gates reach a voltage-threshold. A voltage overshoot occurs as reactions are not instantenous.
+    - The **repolarization phase** follows showing a decline in voltage as the Sodium gates saturate and repell ions, thus allowing Potassium ($K+$) to enter.
     - The **hyperpolarization phase** returns to the resting state as the voltage reaches an equilibrium.
 
 1. *What is resting potential/depolarisation/repolarisation/hyperpolarisation? What mechanism(s) causes each phase to be generated?*
