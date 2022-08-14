@@ -19,8 +19,8 @@ where $b$ is **bias** and $S$ the **slope**.
 \begin{align*}
 z &= w_1u_1 + w_2u_2 + \ldots + w_nu_n \\
 & \rightarrow (z-b) = w_1u_1 + w_2u_2 + \ldots + w_nu_n - b\\
-& \rightarrow (z-b) = w_1u_1 + w_2u_2 + \ldots + w_nu_n - (b-1)\\[2ex]
-\rightarrow & (b-1) \text{ splits to } w_{n+1} \text{ and } u_{n+1}
+& \rightarrow (z-b) = w_1u_1 + w_2u_2 + \ldots + w_nu_n - (b \cdot -1)\\[2ex]
+\rightarrow & (b \cdot -1) \text{ splits to } w_{n+1} \text{ and } u_{n+1}
 \end{align*}
 
 This results in an additional weighted bias shifting the activation function resulting in
