@@ -1,5 +1,5 @@
 ---
-date: 14 August 2022
+date: 17 August 2022
 class: sdu
 ...
 
@@ -687,6 +687,20 @@ More complex splitting algorithms and procesdures:
 
     The gradient describes an $n$-dimensional vector pointing towards the steepest decent on the error manifold's surface.
     Decending this is called gradient decent.
+
+\clearpage
+\newpage
+
+# Robot
+
+- \texttt{192.168.X.1}
+- SSID = \texttt{BIOROLE2022\_RobotX}
+- PWD = \texttt{BioRoLe2022}
+
+Login:
+
+- User: \texttt{pi}
+- PWD: \texttt{raspberry}
 
 \clearpage
 \newpage
